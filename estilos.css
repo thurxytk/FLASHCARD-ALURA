@@ -1,0 +1,153 @@
+/* Remoção de estilos padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilização geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Estilização do cabeçalho com Flexbox */
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background-color: #333;
+    color: white;
+}
+
+.cabecalho h1 {
+    font-size: 24px;
+}
+
+/* Menu de navegação */
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.menu a:hover {
+    color: #4CAF50;
+}
+
+/* Conteúdo principal - ocupará o espaço restante */
+main {
+    flex: 1;
+    padding: 40px 20px;
+}
+
+.conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.conteudo h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.conteudo > p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Seção de cartões com Flexbox */
+.cartoes {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Estilo do cartão externo */
+.cartao {
+    width: 280px;
+    height: 200px;
+    cursor: pointer;
+}
+
+/* Container interno com perspectiva 3D */
+.cartao-interno {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+/* Efeito de rotação ao passar o mouse */
+.cartao:hover .cartao-interno {
+    transform: rotateY(180deg);
+}
+
+/* Estilo das faces do cartão */
+.cartao-frente,
+.cartao-verso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    backface-visibility: hidden;
+}
+
+/* Estilo da frente do cartão */
+.cartao-frente {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.cartao-frente h3 {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Estilo do verso do cartão */
+.cartao-verso {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.cartao-verso h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.cartao-verso p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Rodapé fixo no final */
+.rodape {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
