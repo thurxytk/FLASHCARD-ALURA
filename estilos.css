@@ -14,38 +14,39 @@ body {
     min-height: 100vh;
 }
 
-/* Estilização do cabeçalho com Flexbox */
+/* Estilização do cabeçalho */
 .cabecalho {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 25px;
-    background-color: #333;
+    padding: 20px 30px;
+    background-color: #1e293b;
     color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .cabecalho h1 {
-    font-size: 24px;
+    font-size: 22px;
+    font-weight: 600;
 }
 
 /* Menu de navegação */
-.menu {
-    display: flex;
-    gap: 20px;
-}
-
 .menu a {
     color: white;
     text-decoration: none;
-    font-size: 14px;
-    transition: color 0.3s;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 8px 16px;
+    border-radius: 6px;
+    background-color: #3b82f6;
+    transition: background-color 0.3s ease;
 }
 
 .menu a:hover {
-    color: #4CAF50;
+    background-color: #2563eb;
 }
 
-/* Conteúdo principal - ocupará o espaço restante */
+/* Conteúdo principal */
 main {
     flex: 1;
     padding: 40px 20px;
@@ -54,24 +55,19 @@ main {
 .conteudo {
     max-width: 1200px;
     margin: 0 auto;
+    text-align: center;
 }
 
 .conteudo h2 {
-    font-size: 32px;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.conteudo > p {
-    font-size: 16px;
-    color: #666;
+    font-size: 20px;
     margin-bottom: 30px;
+    color: #475569;
 }
 
-/* Seção de cartões com Flexbox */
+/* Seção de cartões */
 .cartoes {
     display: flex;
-    gap: 20px;
+    gap: 25px;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -79,7 +75,7 @@ main {
 /* Estilo do cartão externo */
 .cartao {
     width: 280px;
-    height: 200px;
+    height: 220px;
     cursor: pointer;
 }
 
@@ -107,35 +103,50 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    text-align: center;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    border-radius: 14px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
     backface-visibility: hidden;
+    overflow: hidden;
 }
 
-/* Estilo da frente do cartão */
+/* Estilo da frente do cartão com Imagem de Fundo */
 .cartao-frente {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: white;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Máscara escura sobre a imagem para destacar o texto */
+.mascara {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
 }
 
 .cartao-frente h3 {
     font-size: 18px;
     font-weight: bold;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.8);
+    text-align: center;
 }
 
 /* Estilo do verso do cartão */
 .cartao-verso {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
     color: white;
+    padding: 20px;
+    text-align: center;
     transform: rotateY(180deg);
 }
 
 .cartao-verso h3 {
     font-size: 18px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .cartao-verso p {
@@ -143,11 +154,11 @@ main {
     line-height: 1.5;
 }
 
-/* Rodapé fixo no final */
+/* Rodapé */
 .rodape {
-    background-color: #333;
-    color: white;
+    background-color: #1e293b;
+    color: #94a3b8;
     text-align: center;
     padding: 20px;
     font-size: 14px;
-}
+} 
